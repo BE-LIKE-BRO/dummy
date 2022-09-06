@@ -22,10 +22,8 @@ pipeline {
 
         stage('Terraform Plan') {
             steps {
-                dir("Terraform") {
                     sh "terraform init"
                     sh "terraform plan"
-                }
             }
         }
 
@@ -34,10 +32,8 @@ pipeline {
         //         message "Do you want to apply this change?"
         //     }
         //     steps {
-        //         dir("Terraform") {
         //             sh "terraform apply"
         //         }
-        //     }
         // }
     }
 }
